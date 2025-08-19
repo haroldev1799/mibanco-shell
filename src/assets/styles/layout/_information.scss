@@ -1,0 +1,49 @@
+.success {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+
+    &__data {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__label {
+        display: flex;
+        gap: 0.25rem;
+
+        &__text {
+            color: var(--text-text-neutral-muted);
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    &__value {
+        color: var(--text-text-neutral-primary);
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .success {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .success {
+        &__data {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+}
